@@ -8,7 +8,7 @@ import (
 
 func day() {
 	sum := 0
-	data, _ := utils.SpiltInput("input.txt")
+	data, _ := utils.SpiltInputByLine(utils.INPUT)
 	for _, item := range data {
 		k, _ := strconv.Atoi(item)
 		sum = sum + (k/3 - 2)
@@ -27,7 +27,7 @@ func nightFunc(item int, sum int) (int, int) {
 
 func night() {
 	sum := 0
-	data, _ := utils.SpiltInputByLine("input.txt")
+	data, _ := utils.SpiltInputByLine(utils.INPUT)
 	for _, item := range data {
 		k, _ := strconv.Atoi(item)
 		_, kSum := nightFunc(k, 0)
