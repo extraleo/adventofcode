@@ -5,12 +5,12 @@ import (
 	"fmt"
 )
 
-func day(noun, verb int) int{
+func day(noun, verb int) int {
 	data, _ := utils.SpiltInputGetInt(utils.INPUT, ",")
 	data[1] = noun
 	data[2] = verb
 	source := extendAndCopy(data, len(data))
-	for index:=0; index < len(source); {
+	for index := 0; index < len(source); {
 		switch source[index] {
 		case 1:
 			// if source[index+3] >= len(source) {
@@ -20,7 +20,7 @@ func day(noun, verb int) int{
 			// 	source = extendAndCopy(source,  max(source[index+1], source[index+2], 0))
 			// }
 			source[source[index+3]] = source[source[index+1]] + source[source[index+2]]
-			index=index+4
+			index = index + 4
 		case 2:
 			// if source[index+3] >= len(source) {
 			// 	source = extendAndCopy(source, source[index+3])
@@ -29,7 +29,7 @@ func day(noun, verb int) int{
 			// 	source = extendAndCopy(source,max(source[index+1], source[index+2], 0))
 			// }
 			source[source[index+3]] = source[source[index+1]] * source[source[index+2]]
-			index=index+4
+			index = index + 4
 		case 99:
 			// fmt.Println("The result: ", source[0])
 			return source[0]
@@ -49,31 +49,28 @@ func max(a, b, c int) int {
 	if a > b {
 		if a > c {
 			return a
-		} else {
-			return c
 		}
-	} else {
-		if b > c {
-			return b
-		} else {
-			return c
-		}
+		return c
 	}
+	if b > c {
+		return b
+	}
+	return c
 }
 
 // seems only Brute-force search
-func night() (int, int){
+func night() (int, int) {
 	for noun := 0; noun <= 99; noun++ {
 		for verb := 0; verb < 99; verb++ {
-			if day(noun,verb) == 19690720{
-				return noun,verb
+			if day(noun, verb) == 19690720 {
+				return noun, verb
 			}
 		}
 	}
-	return 0,0
+	return 0, 0
 }
 
 func main() {
-	noun, verb:=night()
+	noun, verb := night()
 	fmt.Print(100*noun + verb)
 }
