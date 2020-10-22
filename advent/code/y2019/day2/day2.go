@@ -45,18 +45,6 @@ func extendAndCopy(source []int, len int) []int {
 	copy(target, source)
 	return target
 }
-func max(a, b, c int) int {
-	if a > b {
-		if a > c {
-			return a
-		}
-		return c
-	}
-	if b > c {
-		return b
-	}
-	return c
-}
 
 // seems only Brute-force search
 func night() (int, int) {
