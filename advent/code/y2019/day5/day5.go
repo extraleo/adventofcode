@@ -3,7 +3,7 @@ package main
 import "extraleo/algorithm/utils"
 
 func day(noun, verb int) int {
-	data, _ := utils.SpiltInputGetInt(utils.INPUT, ",")
+	data := utils.SpiltInputGetInt(utils.INPUT, ",")
 	data[1] = noun
 	data[2] = verb
 	source := extendAndCopy(data, len(data))

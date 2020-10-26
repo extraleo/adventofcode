@@ -32,7 +32,7 @@ func getVectors(wires []string) []vector {
 }
 
 func day() int {
-	data, _ := utils.SpiltInputByLine(utils.INPUT)
+	data := utils.SpiltInputByLine(utils.INPUT)
 	wires1, _ := utils.SpilInput(data[0], ",")
 	wires2, _ := utils.SpilInput(data[1], ",")
 	vectors1 := getVectors(wires1)
