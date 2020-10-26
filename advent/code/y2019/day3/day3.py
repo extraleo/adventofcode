@@ -32,7 +32,7 @@ wire1_path = path(wire1)
 wire2_path = path(wire2)
 
 intersections = set(wire1_path) & set(wire2_path)
-
+print("Inter: " + ",".join(str(p) for p in intersections))
 distances = {
     manhattan(point): wire1_path[point] + wire2_path[point]
     for point in intersections
