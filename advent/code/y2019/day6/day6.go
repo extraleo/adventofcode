@@ -4,13 +4,15 @@ import (
 	. "extraleo/algorithm/models"
 	"extraleo/algorithm/utils"
 	"fmt"
+	"strings"
 )
 
 func day() int {
 	data := utils.SpiltInputByLine(utils.INPUT)
-	treeMap := make(map[string]*TreeNode, len(data))
+	treeMap := make(map[string]*TreeNode)
 	for _, item := range data {
-		nodeList, _ := utils.SpilInput(item, ")")
+		nodeList := strings.Split(strings.Trim(item," "), ")")
+
 		if treeMap[nodeList[0]] == nil {
 			treeMap[nodeList[0]] = &TreeNode{
 				Name: nodeList[0],
@@ -24,6 +26,7 @@ func day() int {
 		}else {
 			treeMap[nodeList[1]].Val = treeMap[nodeList[1]].Val + 1
 		}
+
 		if treeMap[nodeList[0]].Left == nil {
 			treeMap[nodeList[0]].Left = treeMap[nodeList[1]]
 		} else {
@@ -34,7 +37,9 @@ func day() int {
 	count := 0
 	for _,value:=range treeMap{
 		count = count + value.Val
+		fmt.Println(value.Name, value.Val)
 	}
+
 	return count
 }
 
