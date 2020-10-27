@@ -13,25 +13,12 @@ func day(noun, verb int) int {
 	for index := 0; index < len(source); {
 		switch source[index] {
 		case 1:
-			// if source[index+3] >= len(source) {
-			// 	source = extendAndCopy(source, source[index+3])
-			// }
-			// if max(source[index+1], source[index+2], 0) >= len(source) {
-			// 	source = extendAndCopy(source,  max(source[index+1], source[index+2], 0))
-			// }
 			source[source[index+3]] = source[source[index+1]] + source[source[index+2]]
 			index = index + 4
 		case 2:
-			// if source[index+3] >= len(source) {
-			// 	source = extendAndCopy(source, source[index+3])
-			// }
-			// if max(source[index+1], source[index+2], 0) >= len(source) {
-			// 	source = extendAndCopy(source,max(source[index+1], source[index+2], 0))
-			// }
 			source[source[index+3]] = source[source[index+1]] * source[source[index+2]]
 			index = index + 4
 		case 99:
-			// fmt.Println("The result: ", source[0])
 			return source[0]
 		default:
 			index++

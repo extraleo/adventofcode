@@ -5,6 +5,7 @@ import (
 	"strconv"
 )
 
+// my input is 271973 and 785961
 func day() (int, int) {
 	count := 0
 	nightCount := 0

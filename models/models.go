@@ -2,7 +2,7 @@ package models
 
 type TreeNode struct {
 	Val int
-	Name string
-	Left *TreeNode
-	Right *TreeNode
+	Name string `json: name`
+	Left *TreeNode `json: left`
+	Right *TreeNode `json: right`
 }
