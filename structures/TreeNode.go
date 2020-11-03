@@ -1,4 +1,4 @@
-package models
+package structures
 
 type TreeNode struct {
 	Val int
@@ -6,3 +6,4 @@ type TreeNode struct {
 	Left *TreeNode `json: left`
 	Right *TreeNode `json: right`
 }
+

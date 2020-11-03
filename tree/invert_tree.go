@@ -1,8 +1,6 @@
-package tree
+package leetcode
 
-import (
-	. "extraleo/algorithm/models"
-)
+import "extraleo/algorithm/structures"
 
 /*
  * @lc app=leetcode.cn id=226 lang=golang
@@ -19,6 +17,8 @@ import (
  *     Right *TreeNode
  * }
  */
+
+type TreeNode = structures.TreeNode
 
 func invertTree(root *TreeNode) *TreeNode {
 	if root == nil {
