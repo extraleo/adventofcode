@@ -1,7 +1,7 @@
 package main
 
 import (
-	"extraleo/algorithm/utils"
+	"adventofcode/utils"
 	"fmt"
 	"strconv"
 	"strings"

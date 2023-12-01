@@ -1,6 +1,6 @@
 package main
 
-import "extraleo/algorithm/utils"
+import "adventofcode/utils"
 
 func day(noun, verb int) int {
 	data := utils.SpiltInputGetInt(utils.INPUT, ",")

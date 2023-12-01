@@ -1,3 +1,3 @@
-module extraleo/algorithm
+module adventofcode
 
-go 1.14
+go 1.18
