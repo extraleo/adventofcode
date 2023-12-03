@@ -33,7 +33,6 @@ func night() {
 				partNum, gear :=isPartNum(startIndex, endIndex ,i, lines)
 				if partNum && gear != "" {
 					part:=convertNum(startIndex, endIndex, line)
-					fmt.Println("gear:", part, gear)
 					if(gearMap[gear] == 0){
 						gearMap[gear]=part
 					}else{
