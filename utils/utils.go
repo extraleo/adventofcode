@@ -7,10 +7,8 @@ import (
 	"strings"
 )
 
-const INPUT = "input.txt"
-
 func SpiltInputByLine(inputPath string) []string {
-	data, err := SpilInput(inputPath, "\n")
+	data, err := SpiltInput(inputPath, "\n")
 	if err != nil {
 		panic(err)
 	}
@@ -18,7 +16,7 @@ func SpiltInputByLine(inputPath string) []string {
 }
 
 func SpiltInputGetInt(inputPath string, sep string) []int {
-	data, err := SpilInput(inputPath, sep)
+	data, err := SpiltInput(inputPath, sep)
 	if err != nil {
 		panic(err)
 	}
@@ -30,7 +28,7 @@ func SpiltInputGetInt(inputPath string, sep string) []int {
 
 }
 
-func SpilInput(inputPath string, sep string) ([]string, error) {
+func SpiltInput(inputPath string, sep string) ([]string, error) {
 	data, err := ioutil.ReadFile(inputPath)
 	if err != nil {
 		log.Fatal(err)
