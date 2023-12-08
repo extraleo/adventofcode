@@ -48,15 +48,15 @@ func (h Hand) typeOfCard() int {
 		tmp[index(h.card[i])]++
 	}
 
-	jCount:= tmp[index('J')]
+	jCount := tmp[index('J')]
 	if joker {
 		tmp[index('J')] = 0
 	}
 
 	slices.SortFunc(tmp, func(a, b int) int { return b - a })
 
-	if (joker){
-		tmp[0]+=jCount
+	if joker {
+		tmp[0] += jCount
 	}
 
 	if tmp[0] == 5 {
@@ -87,10 +87,10 @@ var jValue int
 var joker bool
 
 func index(c byte) int {
-	if joker{
+	if joker {
 		jValue = 1
-	}else{
-		jValue =11
+	} else {
+		jValue = 11
 	}
 
 	if c >= '2' && c <= '9' {
@@ -112,45 +112,45 @@ func index(c byte) int {
 }
 
 func day() {
-	joker =false
-	s:=utils.SpiltInputByLine("input.txt")
-	hands:=make([]Hand, 0,len(s))
-	for _,l:=range s{
+	joker = false
+	s := utils.SpiltInputByLine("input.txt")
+	hands := make([]Hand, 0, len(s))
+	for _, l := range s {
 		token := strings.Split(l, " ")
 		hands = append(
 			hands,
 			Hand{
 				card: token[0],
-				bit: utils.Atoi(token[1]),
+				bit:  utils.Atoi(token[1]),
 			},
 		)
 	}
 	fmt.Println("hands:", hands, len(hands))
-	slices.SortFunc(hands, func(h1, h2 Hand) int {return compareHand(h1, h2 )})
-	result:=0
-	for i,h:=range hands{
+	slices.SortFunc(hands, func(h1, h2 Hand) int { return compareHand(h1, h2) })
+	result := 0
+	for i, h := range hands {
 		result = result + (i+1)*h.bit
 	}
 	fmt.Println("day:", result)
 }
 
 func night() {
-	joker =true
-	s:=utils.SpiltInputByLine("input.txt")
-	hands:=make([]Hand, 0,len(s))
-	for _,l:=range s{
+	joker = true
+	s := utils.SpiltInputByLine("input.txt")
+	hands := make([]Hand, 0, len(s))
+	for _, l := range s {
 		token := strings.Split(l, " ")
 		hands = append(
 			hands,
 			Hand{
 				card: token[0],
-				bit: utils.Atoi(token[1]),
+				bit:  utils.Atoi(token[1]),
 			},
 		)
 	}
-	slices.SortFunc(hands, func(h1, h2 Hand) int {return compareHand(h1, h2)})
-	result:=0
-	for i,h:=range hands{
+	slices.SortFunc(hands, func(h1, h2 Hand) int { return compareHand(h1, h2) })
+	result := 0
+	for i, h := range hands {
 		result = result + (i+1)*h.bit
 	}
 	fmt.Println("night:", result)
