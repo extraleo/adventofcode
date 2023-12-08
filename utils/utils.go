@@ -3,6 +3,7 @@ package utils
 import (
 	"io/ioutil"
 	"log"
+	"regexp"
 	"strconv"
 	"strings"
 )
@@ -37,10 +38,29 @@ func SpiltInput(inputPath string, sep string) ([]string, error) {
 	return strings.Split(string(data), sep), err
 }
 
+
+func ConvertIntString2IntList(str string) []int{
+	re:=regexp.MustCompile("[0-9]+")
+	
+	s := re.FindAllString(str, -1)
+	result:=make([]int, len(s))
+	for i,e:=range s{
+		result[i]=Atoi(e)
+	}
+	return result
+
+}
+
+
+func ConvertIntString2String(str string) []string{
+	re:=regexp.MustCompile("[0-9]+")
+	return re.FindAllString(str, -1)
+}
+
 func Max(item ...int) int {
 	max := 0
 	for _, i := range item {
-		if i > max {
+		if i==0||i > max {
 			max = i
 		}
 	}
@@ -50,7 +70,7 @@ func Max(item ...int) int {
 func Min(item ...int) int {
 	min := 0
 	for _, i := range item {
-		if i < min {
+		if i==0||i < min {
 			min = i
 		}
 	}
