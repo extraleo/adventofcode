@@ -1,8 +1,8 @@
 package utils
 
 import (
-	"io/ioutil"
 	"log"
+	"os"
 	"regexp"
 	"strconv"
 	"strings"
@@ -29,14 +29,13 @@ func SpiltInputGetInt(inputPath string, sep string) []int {
 
 }
 
-
-func SpiltInputGetIntList(input string, sepLine string)[][]int {
+func SpiltInputGetIntList(input string, sepLine string) [][]int {
 	lines := strings.Split(input, "\n")
-		result:=[][]int{}
-	for _,line:=range lines{
-		lineToken:=strings.Split(line, sepLine)
-		nums:=[]int{}
-		for _,i := range lineToken{
+	result := [][]int{}
+	for _, line := range lines {
+		lineToken := strings.Split(line, sepLine)
+		nums := []int{}
+		for _, i := range lineToken {
 			nums = append(nums, Atoi(i))
 		}
 		result = append(result, nums)
@@ -46,7 +45,7 @@ func SpiltInputGetIntList(input string, sepLine string)[][]int {
 }
 
 func SpiltInput(inputPath string, sep string) ([]string, error) {
-	data, err := ioutil.ReadFile(inputPath)
+	data, err := os.ReadFile(inputPath)
 	if err != nil {
 		log.Fatal(err)
 		return nil, err
@@ -54,26 +53,22 @@ func SpiltInput(inputPath string, sep string) ([]string, error) {
 	return strings.Split(string(data), sep), err
 }
 
+func ConvertIntString2IntList(str string) []int {
+	re := regexp.MustCompile("[0-9]+")
 
-func ConvertIntString2IntList(str string) []int{
-	re:=regexp.MustCompile("[0-9]+")
-	
 	s := re.FindAllString(str, -1)
-	result:=make([]int, len(s))
-	for i,e:=range s{
-		result[i]=Atoi(e)
+	result := make([]int, len(s))
+	for i, e := range s {
+		result[i] = Atoi(e)
 	}
 	return result
 
 }
 
-
-func ConvertIntString2String(str string) []string{
-	re:=regexp.MustCompile("[0-9]+")
+func ConvertIntString2String(str string) []string {
+	re := regexp.MustCompile("[0-9]+")
 	return re.FindAllString(str, -1)
 }
-
-
 
 func Atoi(s string) int {
 	item, _ := strconv.Atoi(s)

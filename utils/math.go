@@ -1,6 +1,5 @@
 package utils
 
-
 func GCD(a, b int) int {
 	for b != 0 {
 		a, b = b, a%b
@@ -16,11 +15,10 @@ func LCM(a, b int, integers ...int) int {
 	return res
 }
 
-
 func Max(item ...int) int {
 	max := 0
 	for _, i := range item {
-		if i==0||i > max {
+		if i == 0 || i > max {
 			max = i
 		}
 	}
@@ -30,7 +28,7 @@ func Max(item ...int) int {
 func Min(item ...int) int {
 	min := 0
 	for _, i := range item {
-		if i==0||i < min {
+		if i == 0 || i < min {
 			min = i
 		}
 	}

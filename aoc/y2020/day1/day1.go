@@ -6,7 +6,7 @@ import (
 )
 
 func day() int {
-	data := utils.SpiltInputGetInt(utils.INPUT, "\n")
+	data := utils.SpiltInputGetInt("input.txt", "\n")
 	dataMap := make(map[int]bool)
 	for _, item := range data {
 		dataMap[item] = true
@@ -20,7 +20,7 @@ func day() int {
 }
 
 func night() int {
-	data := utils.SpiltInputGetInt(utils.INPUT, "\n")
+	data := utils.SpiltInputGetInt("input.txt", "\n")
 	dataMap := make(map[int]bool)
 	for _, item := range data {
 		dataMap[item] = true

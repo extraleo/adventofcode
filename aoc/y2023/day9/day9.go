@@ -54,5 +54,6 @@ func night() {
 }
 
 func main() {
+	day()
 	night()
 }

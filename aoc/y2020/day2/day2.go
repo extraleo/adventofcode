@@ -8,7 +8,7 @@ import (
 )
 
 func day() int {
-	data := utils.SpiltInputByLine(utils.INPUT)
+	data := utils.SpiltInputByLine("input.txt")
 	count := 0
 	for _, item := range data {
 		aPSW := breakItem(item)

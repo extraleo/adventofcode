@@ -32,9 +32,9 @@ func getVectors(wires []string) []vector {
 }
 
 func day() int {
-	data := utils.SpiltInputByLine(utils.INPUT)
-	wires1, _ := utils.SpilInput(data[0], ",")
-	wires2, _ := utils.SpilInput(data[1], ",")
+	data := utils.SpiltInputByLine("input.txt")
+	wires1, _ := utils.SpiltInput(data[0], ",")
+	wires2, _ := utils.SpiltInput(data[1], ",")
 	vectors1 := getVectors(wires1)
 	vectors2 := getVectors(wires2)
 	var manhatten []int

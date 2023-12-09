@@ -6,7 +6,7 @@ import (
 )
 
 func day(noun, verb int) int {
-	data := utils.SpiltInputGetInt(utils.INPUT, ",")
+	data := utils.SpiltInputGetInt("input.txt", ",")
 	data[1] = noun
 	data[2] = verb
 	source := extendAndCopy(data, len(data))
