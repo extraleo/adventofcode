@@ -57,32 +57,7 @@ func ConvertIntString2String(str string) []string{
 	return re.FindAllString(str, -1)
 }
 
-func Max(item ...int) int {
-	max := 0
-	for _, i := range item {
-		if i==0||i > max {
-			max = i
-		}
-	}
-	return max
-}
 
-func Min(item ...int) int {
-	min := 0
-	for _, i := range item {
-		if i==0||i < min {
-			min = i
-		}
-	}
-	return min
-}
-
-func Abs(a int) int {
-	if a < 0 {
-		return -a
-	}
-	return a
-}
 
 func Atoi(s string) int {
 	item, _ := strconv.Atoi(s)
