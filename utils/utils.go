@@ -29,6 +29,22 @@ func SpiltInputGetInt(inputPath string, sep string) []int {
 
 }
 
+
+func SpiltInputGetIntList(input string, sepLine string)[][]int {
+	lines := strings.Split(input, "\n")
+		result:=[][]int{}
+	for _,line:=range lines{
+		lineToken:=strings.Split(line, sepLine)
+		nums:=[]int{}
+		for _,i := range lineToken{
+			nums = append(nums, Atoi(i))
+		}
+		result = append(result, nums)
+	}
+	return result
+
+}
+
 func SpiltInput(inputPath string, sep string) ([]string, error) {
 	data, err := ioutil.ReadFile(inputPath)
 	if err != nil {
