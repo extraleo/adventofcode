@@ -7,6 +7,7 @@ import (
 	"strings"
 )
 
+// thanks https://www.reddit.com/r/adventofcode/comments/18ghux0/comment/kd0npmi/?utm_source=share&utm_medium=web2x&context=3
 func main() {
 	// day()
 	night()
@@ -91,6 +92,63 @@ func count(spring string, numbers []uint8) int {
 	panic("cannot happen")
 }
 
+func anotherCount(spring string, numbers []uint8) int {
+	if len(spring) == 0 && len(numbers) == 0 {
+		return 1
+	}
+
+	if len(spring) == 0 {
+		return 0
+	}
+
+	if value, ok := cache[springInfo{spring, string(numbers)}]; ok {
+		return value
+	}
+
+	// cut dot
+	if spring[0] == '.' {
+		res := count(spring[1:], numbers)
+		return setCache(spring, numbers, res)
+	}
+
+	if spring[0] == '?' {
+		res := count(spring[1:], numbers) + count("#"+spring[1:], numbers)
+		return setCache(spring, numbers, res)
+	}
+
+	if spring[0] == '#' {
+		// out of bound
+		if len(numbers) == 0 {
+			res := 0
+			return setCache(spring, numbers, res)
+		}
+
+		// check length >= sum number
+		sum := 0
+		for _, n := range numbers {
+			sum += int(n)
+		}
+		if len(spring) < sum {
+			res := 0
+			return setCache(spring, numbers, res)
+		}
+
+		// check first group
+		// all chars in firs group are ? or #
+		number := numbers[0]
+		for i := 0; i < int(number); i++ {
+			if spring[i] == '.' {
+				res := 0
+				return setCache(spring, numbers, res)
+			}
+		}
+
+		res := count(spring[number+1:], numbers[1:])
+		return setCache(spring, numbers, res)
+	}
+	panic("ERROR!!!!!")
+}
+
 func day() {
 
 	input = strings.TrimSuffix(input, "\n")
@@ -101,7 +159,7 @@ func day() {
 		fields := strings.Split(line, " ")
 		springs := fields[0]
 		numbers := utils.ConvertIntString2Int8List(fields[1])
-		result += count(springs, numbers)
+		result += anotherCount(springs, numbers)
 	}
 
 	fmt.Println("day:", result)
@@ -135,7 +193,7 @@ func night() {
 		numbers := utils.ConvertIntString2Int8List(fields[1])
 		springs = unfoldSpring(springs)
 		numbers = unfoldNumbers(numbers)
-		result += count(springs, numbers)
+		result += anotherCount(springs, numbers)
 	}
 
 	fmt.Println("night:", result)
