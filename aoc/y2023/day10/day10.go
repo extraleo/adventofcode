@@ -1,6 +1,11 @@
 package main
 
-import "strings"
+import (
+	"adventofcode/utils/models"
+	"adventofcode/utils/set"
+	_ "embed"
+	"strings"
+)
 
 //go:embed input.txt
 var input string
@@ -27,11 +32,11 @@ const (
 
 
 
-func buildGrid(lines []string) Grid{
+func buildGrid(lines []string) models.Grid{
 	grid:=make(Grid)
 	for j,l:=range lines{
 		for i, c:=range l{
-			grid[Point{X: i, Y: j}] = uint8(c)
+			grid[Point{X: i, Y: j}] = int(c)
 		}
 	}
 	return grid
