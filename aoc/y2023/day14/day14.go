@@ -11,7 +11,7 @@ var input string
 
 func main() {
 	day()
-	// night()
+	night()
 }
 
 func night() {
@@ -24,7 +24,7 @@ func day() {
 	loads := make([]int, len(grid[0]))
 
 	n := len(grid)
-	for i, _ := range loads {
+	for i:= range loads {
 		loads[i] = n
 	}
 
