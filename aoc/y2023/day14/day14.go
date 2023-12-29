@@ -1,7 +1,7 @@
 package main
 
 import (
-	"adventofcode/utils"
+	"adventofcode/utils/models"
 	_ "embed"
 	"fmt"
 )
@@ -19,8 +19,7 @@ func night() {
 }
 
 func day() {
-	parts := utils.ParseAsMatrixChars(input)
-	grid := parts[0]
+	grid := models.ParseAsMatrixFromInput(input)
 	loads := make([]int, len(grid[0]))
 
 	n := len(grid)

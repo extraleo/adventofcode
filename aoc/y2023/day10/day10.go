@@ -52,8 +52,8 @@ func findStart(grid Grid) Point{
 }
 
 
-func findCycle(grid Grid, neighbor Point, direction int)(path set.Set[Point], bool){
-
+func findCycle(grid Grid, neighbor Point, direction int)(path set.Set[models.Position], bool){
+	return new 
 }
 
 func night() {

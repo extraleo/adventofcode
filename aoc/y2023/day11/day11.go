@@ -57,7 +57,7 @@ func buildGrid(lines []string, expand bool) (grid models.Grid, offset [][]int) {
 	for j, l := range lines {
 		for i, c := range l {
 			if c == '#' {
-				grid[models.Point{X: i, Y: j}] = count
+				grid[models.Position{X: i, Y: j}] = count
 				count++
 			}
 
