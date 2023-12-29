@@ -86,25 +86,3 @@ func Atoi(s string) int {
 	item, _ := strconv.Atoi(s)
 	return item
 }
-
-type MatrixChar [][]rune
-
-func getPattern(part string) MatrixChar {
-	lines := strings.Split(part, "\n")
-
-	var pattern MatrixChar
-	for _, l := range lines {
-		pattern = append(pattern, []rune(l))
-	}
-	return pattern
-}
-
-func ParseAsMatrixChars(input string) []MatrixChar {
-	parts := strings.Split(input, "\n\n")
-
-	var patterns []MatrixChar
-	for _, b := range parts {
-		patterns = append(patterns, getPattern(b))
-	}
-	return patterns
-}
