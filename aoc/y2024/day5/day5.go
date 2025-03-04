@@ -5,11 +5,13 @@ import (
 	_ "embed"
 	"fmt"
 	"slices"
+
+	"github.com/dominikbraun/graph"
 )
 
-//go:embed sample-updates.txt
+//go:embed input-updates.txt
 var updateInput string
-//go:embed sample-rules.txt
+//go:embed input-rules.txt
 var ruleInput string
 
 func day() {
@@ -36,32 +38,28 @@ func isUpdateValid(rules [][]int, update []int) bool{
 	return true
 }
 
-func isUpdateValidAndRule(rules [][]int, update []int)  []int{
-	for _, r := range(rules) {
-		left := r[0]
-		right := r[1]
-		lIndex := slices.Index(update, left)
-		rIndex := slices.Index(update, right)
-		if slices.Contains(update, left) && slices.Contains(update, right) && lIndex > rIndex{
-			tmp := update[lIndex]
-			update[lIndex] = update[rIndex]
-			update[rIndex] = tmp
-			return update
-		}
-	}
-	return nil
-}
 
 func night(){
 	night := 0
 	updates := utils.SpiltInputGetIntList(updateInput, ",")
 	rules := utils.SpiltInputGetIntList(ruleInput, "|")
 	for _, u := range(updates){
-		correct := isUpdateValidAndRule(rules, u)
-		if correct != nil {
-			mid := len(correct) / 2
-			night += u[mid]
-		}		
+		if !isUpdateValid(rules,u) {
+			sort:=graph.New(graph.IntHash, graph.Directed(), graph.PreventCycles())
+			for _, rule := range(rules){
+				l:=rule[0]
+				r:=rule[1]
+				if slices.Contains(u, l) && slices.Contains(u, r){
+					sort.AddVertex(l)
+					sort.AddVertex(r)
+					sort.AddEdge(l,r)
+				}
+			}
+			order,_:=graph.TopologicalSort(sort)
+			mid:=len(order)/2
+			night += order[mid]
+		}
+	
 	}
 	fmt.Println("night: ", night)
 }
