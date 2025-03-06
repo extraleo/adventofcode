@@ -9,6 +9,8 @@ import (
 //go:embed sample.txt
 var input string
 
+var path map[Position]Position
+
 var offsetStream = []Position{
 	{X:-1,Y:0},
 	{X:0,Y:1},
@@ -21,21 +23,38 @@ func main(){
 	night()
 }
 
+func night(){
+	grid := ParseGrid(input)
+	night := 0
+	for su:=range(path){
+		newGrid := copyAndSetGrid(grid, su)
+		if ok, _ := trackGuard(newGrid);  !ok {
+			night++
+		}
+	}
+	fmt.Println("night: ", night)
+}
+
+
+func copyAndSetGrid(grid map[Position]rune,obstructions Position) map[Position]rune{
+	copy := grid
+	copy[obstructions] = '#'
+	return copy
+}
 
 
 func day(){
 	grid := ParseGrid(input)
-	repeat, pathLen := trackGuard(grid)
-	fmt.Println("day: ",repeat, len(pathLen))
+	_, path = trackGuard(grid)
+	fmt.Println("day: ",len(path))
 }
 
-func trackGuard(grid map[Position]rune) (int, map[Position]Position){
+func trackGuard(grid map[Position]rune) (bool, map[Position]Position){
 	guard := getGuardPosition(grid)
 	turnRight := 0
 	offset := getOffset(turnRight, offsetStream)
 	visited := make(map[Position]Position)
 	visited[guard]=offset
-	repeat := 0
 	for ;; {
 		nextGuard := nextGuard(guard, offset)
 		if v, ok := grid[nextGuard]; ok{
@@ -43,18 +62,15 @@ func trackGuard(grid map[Position]rune) (int, map[Position]Position){
 				turnRight++
 				offset = getOffset(turnRight, offsetStream)
 			}else{
-				if offsetVisited, vOk:=visited[nextGuard]; !vOk {
+				if existDirect, vOk:=visited[nextGuard]; !vOk {
 					visited[nextGuard] = offset
-				}else{
-					if offsetVisited != offset{
-						repeat++
-						fmt.Println(nextGuard, offset)
-					}
+				}else if existDirect == offset {
+					return false, visited
 				}
 				guard = nextGuard
 			}
 		}else{
-			return repeat, visited
+			return true, visited
 		}
 	}
 }
@@ -70,9 +86,7 @@ func getOffset(turnRight int, offsetStream []Position) Position{
 	 return p
 }
 
-func night(){
-	fmt.Println("night: ")
-}
+
 
 func getGuardPosition(grid map[Position]rune) Position{
 	for k,v := range(grid){
