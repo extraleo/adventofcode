@@ -1,1 +1,1 @@
-advent of code
+# 算法的本质是穷举

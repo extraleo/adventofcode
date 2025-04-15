@@ -1,4 +1,0 @@
-## Collections
-## Linked list
-## Tree
-##

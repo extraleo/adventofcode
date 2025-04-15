@@ -23,6 +23,12 @@ func main(){
 	night()
 }
 
+func day(){
+	grid := ParseGrid(input)
+	_, path = trackGuard(grid)
+	fmt.Println("day: ",len(path))
+}
+
 func night(){
 	grid := ParseGrid(input)
 	night := 0
@@ -42,12 +48,6 @@ func copyAndSetGrid(grid map[Position]rune,obstructions Position) map[Position]r
 	return copy
 }
 
-
-func day(){
-	grid := ParseGrid(input)
-	_, path = trackGuard(grid)
-	fmt.Println("day: ",len(path))
-}
 
 func trackGuard(grid map[Position]rune) (bool, map[Position]Position){
 	guard := getGuardPosition(grid)
