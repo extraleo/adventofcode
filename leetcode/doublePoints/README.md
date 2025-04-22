@@ -1,8 +1,16 @@
-# 题单
+# 双指针和滑动窗口
+## 题单
 https://leetcode.cn/discuss/post/3578981/ti-dan-hua-dong-chuang-kou-ding-chang-bu-rzz7/
+ 
 
-# 已写
-- medium 1456 maximum-number-of-vowels-in-a-substring-of-given-length 
-- simple 643 maximum-average-subarray-i
-- medium 1343 number-of-sub-arrays-of-size-k-and-average-greater-than-or-equal-to-threshold
+## 滑动窗口
+
+核心思想是 +1 和 -1
+https://leetcode.cn/problems/maximum-number-of-vowels-in-a-substring-of-given-length/solutions/2809359/tao-lu-jiao-ni-jie-jue-ding-chang-hua-ch-fzfo/
+
+- 1456 maximum-number-of-vowels-in-a-substring-of-given-length medium
+- 643 maximum-average-subarray-i simple
+- 1343 number-of-sub-arrays-of-size-k-and-average-greater-than-or-equal-to-threshold medium
+- 2090 k-radius-subarray-averages medium
+
 
