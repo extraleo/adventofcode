@@ -1,6 +1,6 @@
 package main
 
-import "fmt"
+// import "fmt"
 
 func maxVowels(s string, k int) int {
 	max := 0
