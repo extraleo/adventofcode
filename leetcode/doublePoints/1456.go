@@ -1,7 +1,5 @@
 package main
 
-// import "fmt"
-
 func maxVowels(s string, k int) int {
 	max := 0
 	old := 0
@@ -40,8 +38,3 @@ func maxMax(a,b int) int{
 	}
 	return b
 }
-
-
-// func main(){
-// 	fmt.Println(maxVowels("leetcode", 3))
-// }
