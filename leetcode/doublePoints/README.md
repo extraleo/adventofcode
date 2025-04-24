@@ -13,11 +13,16 @@ https://leetcode.cn/discuss/post/3578981/ti-dan-hua-dong-chuang-kou-ding-chang-b
 - 643 maximum-average-subarray-i simple
 - 1343 number-of-sub-arrays-of-size-k-and-average-greater-than-or-equal-to-threshold medium
 - 2090 k-radius-subarray-averages medium
-- [] 2841 maximum-sum-of-almost-unique-subarray
+- 2841 maximum-sum-of-almost-unique-subarray
 - 2461 maximum-sum-of-distinct-subarrays-with-length-k
-- 1423 maximum-points-you-can-obtain-from-cards
-- 1652 defuse-the-bomb
+  - same as 2841, m == k
+- [TBD] 1423 maximum-points-you-can-obtain-from-cards
+  1. 环形数组的滑动窗口
+  2. 计算长为 n−k 的连续子数组和的最小值
+
+### 进阶 - 选做
 
 ## 不定长滑动窗口
-
-
+只要是连续的子数组, 都可以用滑动窗口
+### 基础
+- 3 longest-substring-without-repeating-characters
