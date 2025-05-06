@@ -7,6 +7,7 @@ https://leetcode.cn/discuss/post/3578981/ti-dan-hua-dong-chuang-kou-ding-chang-b
 ### 两数之和
 - 167 two-sum-ii-input-array-is-sorted
 - 15 3sum
+- 2824 count-pairs-whose-sum-is-less-than-target
 
 ## 定长滑动窗口
 ### 基础
