@@ -2,6 +2,8 @@
 ## 题单
 https://leetcode.cn/discuss/post/3578981/ti-dan-hua-dong-chuang-kou-ding-chang-bu-rzz7/
  
+## 双向双指针
+> 用 O(1) 的时间获得 O(N) 的信息
 
 ## 定长滑动窗口
 ### 基础

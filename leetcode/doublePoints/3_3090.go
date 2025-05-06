@@ -6,9 +6,7 @@ import (
 )
 
 func lengthOfLongestSubstring(s string) int {
-
 	return maxLengthSubstrings(s, 1)
-
 }
 
 func maximumLengthSubstring(s string) int {
