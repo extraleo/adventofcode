@@ -4,6 +4,9 @@ https://leetcode.cn/discuss/post/3578981/ti-dan-hua-dong-chuang-kou-ding-chang-b
  
 ## 双向双指针
 > 用 O(1) 的时间获得 O(N) 的信息
+### 两数之和
+- 167 two-sum-ii-input-array-is-sorted
+- 15 3sum
 
 ## 定长滑动窗口
 ### 基础
