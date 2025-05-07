@@ -9,11 +9,16 @@ https://leetcode.cn/discuss/post/3578981/ti-dan-hua-dong-chuang-kou-ding-chang-b
 > 优化: 一般有三个优化
 > 考虑边界条件: i + i+1 + i+2  和 i + n-1 + n-2
 > 考虑重复元素
-### 两数之和
+### 两数之和 -> 4 数之和
+> 这里是用排序+双指针来解决的, 如果不这样的话就是正儿八经的背包问题了
 - 167 two-sum-ii-input-array-is-sorted
 - 15 3sum
 - 2824 count-pairs-whose-sum-is-less-than-target
 - 16 3sum-closest
+- 18 4sum
+  > 4数之和就是3数之和再加一次for 循环. 先枚举第一个,再枚举第二个
+- 611 valid-triangle-number 
+  > 不能简单地套公式
 
 ## 定长滑动窗口
 ### 基础
