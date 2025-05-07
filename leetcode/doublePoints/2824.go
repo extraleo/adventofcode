@@ -29,6 +29,6 @@ func countPairs(nums []int, target int) int {
 	return count
 }
 
-func main() {
-	countPairs([]int{-1, 1, 2, 3, 1}, 2)
-}
+// func main() {
+// 	countPairs([]int{-1, 1, 2, 3, 1}, 2)
+// }

@@ -4,10 +4,16 @@ https://leetcode.cn/discuss/post/3578981/ti-dan-hua-dong-chuang-kou-ding-chang-b
  
 ## 双向双指针
 > 用 O(1) 的时间获得 O(N) 的信息
+> 排序不影响结果的话, 先排序
+> 左右两边比较
+> 优化: 一般有三个优化
+> 考虑边界条件: i + i+1 + i+2  和 i + n-1 + n-2
+> 考虑重复元素
 ### 两数之和
 - 167 two-sum-ii-input-array-is-sorted
 - 15 3sum
 - 2824 count-pairs-whose-sum-is-less-than-target
+- 16 3sum-closest
 
 ## 定长滑动窗口
 ### 基础
