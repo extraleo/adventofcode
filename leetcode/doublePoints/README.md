@@ -18,7 +18,10 @@ https://leetcode.cn/discuss/post/3578981/ti-dan-hua-dong-chuang-kou-ding-chang-b
 - 18 4sum
   > 4数之和就是3数之和再加一次for 循环. 先枚举第一个,再枚举第二个
 - 611 valid-triangle-number 
-  > 不能简单地套公式
+  > 不能简单地套公式, 还得具体情况具体分析
+### 接雨水
+> 两边比较, 移动短边
+- 11 container-with-most-water
 
 ## 定长滑动窗口
 ### 基础
