@@ -22,6 +22,7 @@ https://leetcode.cn/discuss/post/3578981/ti-dan-hua-dong-chuang-kou-ding-chang-b
 ### 接雨水
 > 两边比较, 移动短边
 - 11 container-with-most-water
+- 42 trapping rain water
 
 ## 定长滑动窗口
 ### 基础
