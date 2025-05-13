@@ -1,7 +1,7 @@
 package main
 
 import (
-	"fmt"
+	// "fmt"
 	"slices"
 )
 
@@ -29,7 +29,7 @@ func triangleNumber(nums []int) int {
 	return ans
 }
 
-func main() {
-	ans := triangleNumber([]int{2, 2, 3, 4})
-	fmt.Println(ans)
-}
+// func main() {
+// 	ans := triangleNumber([]int{2, 2, 3, 4})
+// 	fmt.Println(ans)
+// }
