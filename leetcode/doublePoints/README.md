@@ -27,7 +27,7 @@ https://leetcode.cn/discuss/post/3578981/ti-dan-hua-dong-chuang-kou-ding-chang-b
 ## 定长滑动窗口
 > 1.维护一个有条件的滑动窗口；
 > 2.右端点右移，导致窗口扩大，是不满足条件的罪魁祸首；
-> 3.左端点右移目的是为了缩小窗口，重新满足条件
+> 3.**左端点右移目的是为了缩小窗口，重新满足条件**
 ### 基础
 > 核心思想是 +1 和 -1, 因为窗口滑动的过程中, 中间的数是不变的
 > 其中滑动窗口开始循环的下标, 既可以从 0 开始, 也可以从k 开始, 从k 开始的话, 就要先计算好一个base值, 在这个值上进行 +1 和 -1 的操作. insert -> update -> delete
@@ -53,5 +53,5 @@ https://leetcode.cn/discuss/post/3578981/ti-dan-hua-dong-chuang-kou-ding-chang-b
 - 209 minimum-size-subarray-sum 
   - 为什么这题的时间复杂度是 O(N) 呢? 想象下毛毛虫, 前面爬了, 后面只是走前面走过的路
 - 3 longest-substring-without-repeating-characters
-- [TBD] 3090 maximum-length-substring-with-two-occurrences 
+- 3090 maximum-length-substring-with-two-occurrences 
   - 和 3 是异曲同工, 也和 2461 2841 很像. 2道定长. 重新写一下3

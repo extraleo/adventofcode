@@ -15,28 +15,24 @@ func maximumLengthSubstring(s string) int {
 
 // m == repeat count
 func maxLengthSubstrings(s string, m int) int {
-  start, max := 0, 0
+  left, ans := 0, 0
 	vMap := map[byte]int{}
-	for i := 0; i< len(s); i++{
-		// if exist
-		if v, ok := vMap[s[i]]; ok {
-			// plus 1
-			vMap[s[i]] = v + 1
-			if vMap[s[i]] >= m {
-				vMap[s[start]] = vMap[s[start]] -1
-				max = utils.MaxInt(max, i-start)
-				start++
-				continue
-			}
+	for i:=range len(s) {
+		v := s[i]
+		vMap[v] = vMap[v] + 1
+		for vMap[v] > m{
+			vMap[s[left]] = vMap[s[left]] - 1
+			left++
 		}
-		vMap[s[i]] = 1
-		max = utils.MaxInt(max, i-start+1)
+		ans = max(ans, i-left+1)
 	}
-	return max
+	return ans
 }
 
 // deprecated
 // 3 solution
+// 这个版本不适用于 k =2 的情况, 主要是是出在如何找到第二个重复字符的位置
+// 在最初的版本上我用了一个额外的数组来记录重复字母的位置
 func firstEdition(s string) int {
 	start := 0
 	max := 0

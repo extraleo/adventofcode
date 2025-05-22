@@ -1,6 +1,5 @@
 package main
 
-import "fmt"
 
 func trap(height []int) int {
 	n := len(height)
@@ -44,15 +43,4 @@ func trapFirst(height []int) int {
 		ans += min(preMax[i], sufMax[i]) - height[i]
 	}
 	return ans
-}
-
-// func min(a, b int)int{
-// 	if a < b {
-// 		return a
-// 	}
-// 	return b
-   // }
-
-func main() {
-	fmt.Println("ans", trap([]int{0, 1, 0, 2, 1, 0, 1, 3, 2, 1, 2, 1}))
 }
