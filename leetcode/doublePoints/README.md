@@ -50,8 +50,19 @@ https://leetcode.cn/discuss/post/3578981/ti-dan-hua-dong-chuang-kou-ding-chang-b
 只要是连续的子数组, 都可以用滑动窗口
 
 ### 基础
+最短/最长/方案数
 - 209 minimum-size-subarray-sum 
   - 为什么这题的时间复杂度是 O(N) 呢? 想象下毛毛虫, 前面爬了, 后面只是走前面走过的路
 - 3 longest-substring-without-repeating-characters
 - 3090 maximum-length-substring-with-two-occurrences 
   - 和 3 是异曲同工, 也和 2461 2841 很像. 2道定长. 重新写一下3
+- 2958 length-of-longest-subarray-with-at-most-k-frequency
+  - 和 3090 一模一样, k -> 3了而已
+- 713 subarray-product-less-than-k
+2730. 找到最长的半重复子字符串 https://leetcode.cn/problems/find-the-longest-semi-repetitive-substring/
+1004. 最大连续 1 的个数 III https://leetcode.cn/problems/max-consecutive-ones-iii/
+2962. 统计最大元素出现至少 K 次的子数组 https://leetcode.cn/problems/count-subarrays-where-max-element-appears-at-least-k-times/
+2302. 统计得分小于 K 的子数组数目 https://leetcode.cn/problems/count-subarrays-with-score-less-than-k/
+1658. 将 x 减到 0 的最小操作数 https://leetcode.cn/problems/minimum-operations-to-reduce-x-to-zero/
+76. 最小覆盖子串 https://leetcode.cn/problems/minimum-window-substring/
+
