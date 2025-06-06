@@ -1,32 +1,22 @@
 package main
 
-import "fmt"
-
-
 func reverseBetween(head *ListNode, left int, right int) *ListNode {
 	dummy := &ListNode{Val: -1, Next: head}
-	var pre, cur *ListNode = nil, dummy
-	for range left {
-		cur = cur.Next
+	p0 := dummy
+	for range left - 1 {
+		p0 = p0.Next
 	}
-    fmt.Println(cur.Val)
-	for range(right-left){
+	var pre, cur *ListNode = nil, p0.Next
+
+	for range right - left + 1 {
 		nxt := cur.Next
 		cur.Next = pre
 		pre = cur
 		cur = nxt
 	}
-	dummy.Next.Next = cur
-	dummy.Next = pre
+
+	p0.Next.Next = cur
+	p0.Next = pre
 
 	return dummy.Next
-}
-
-
-func main(){
-	hea
-	for i:=range 5 {
-		
-	}
-	reverseBetween()
 }
