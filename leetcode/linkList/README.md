@@ -1,4 +1,6 @@
-# 反转链表
+# 链表
+
+## 反转链表
 ```
 nxt := cur.Next
 cur.Next = pre
@@ -23,3 +25,16 @@ cur = nxt
   - 反转 -> 2 两数相加 -> 反转
 - 2816. 翻倍以链表形式表示的数字 https://leetcode.cn/problems/double-a-number-represented-as-a-linked-list/
   - 翻倍就是两个一样的数相加
+
+## 快慢指针
+
+- 876. 链表的中间结点 https://leetcode.cn/problems/middle-of-the-linked-list/solution/mei-xiang-ming-bai-yi-ge-shi-pin-jiang-t-wzwm/
+  - for fast != nil && fast.Next != nil  return slow
+141. 环形链表 https://leetcode.cn/problems/linked-list-cycle/solution/mei-xiang-ming-bai-yi-ge-shi-pin-jiang-t-c4sw/
+  - for fast != nil && fast.Next != nil    if fast == slow  return true
+142. 环形链表 II https://leetcode.cn/problems/linked-list-cycle-ii/solution/mei-xiang-ming-bai-yi-ge-shi-pin-jiang-t-nvsq/
+143. 重排链表 https://leetcode.cn/problems/reorder-list/solution/mei-xiang-ming-bai-yi-ge-shi-pin-jiang-t-u66q/
+
+课后作业：
+234. 回文链表 https://leetcode.cn/problems/palindrome-linked-list/
+2130. 链表最大孪生和 https://leetcode.cn/problems/maximum-twin-sum-of-a-linked-list/
