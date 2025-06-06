@@ -18,6 +18,7 @@ cur = nxt
 - 24. 两两交换链表中的节点 https://leetcode.cn/problems/swap-nodes-in-pairs/
   - `k = 2` 的 25题
 - 2 两数相加 I https://leetcode.cn/problems/add-two-numbers/solutions/2327008/dong-hua-jian-ji-xie-fa-cong-di-gui-dao-oe0di/
+  - 尾插法, 要哨兵节点
 - 445. 两数相加 II https://leetcode.cn/problems/add-two-numbers-ii/
   - 反转 -> 2 两数相加 -> 反转
 - 2816. 翻倍以链表形式表示的数字 https://leetcode.cn/problems/double-a-number-represented-as-a-linked-list/
