@@ -7,6 +7,7 @@ import (
 func successfulPairs(spells []int, potions []int, success int64) []int {
 	slices.Sort(potions)
 	ans := make([]int, len(spells))
+	
 	for i, v := range(spells) {
 		target := int(success-1)/v +1
 		ans[i]=findLargerBound(potions, target)
