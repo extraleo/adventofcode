@@ -40,3 +40,15 @@ cur = nxt
   - 中间节点 + 反转链表
 2130. 链表最大孪生和 https://leetcode.cn/problems/maximum-twin-sum-of-a-linked-list/
   - 中间节点 + 反转
+
+## 删除节点/链表去重  
+237. 删除链表中的节点 https://leetcode.cn/problems/delete-node-in-a-linked-list/solution/ru-he-shan-chu-jie-dian-liu-fen-zhong-ga-x3kn/
+19. 删除链表的倒数第 N 个结点 https://leetcode.cn/problems/remove-nth-node-from-end-of-list/solution/ru-he-shan-chu-jie-dian-liu-fen-zhong-ga-xpfs/
+83. 删除排序链表中的重复元素 https://leetcode.cn/problems/remove-duplicates-from-sorted-list/solution/ru-he-qu-zhong-yi-ge-shi-pin-jiang-tou-p-98g7/
+82. 删除排序链表中的重复元素 II https://leetcode.cn/problems/remove-duplicates-from-sorted-list-ii/solution/ru-he-qu-zhong-yi-ge-shi-pin-jiang-tou-p-2ddn/
+
+课后作业：
+203. 移除链表元素 https://leetcode.cn/problems/remove-linked-list-elements/
+3217. 从链表中移除在数组中存在的节点 https://leetcode.cn/problems/delete-nodes-from-linked-list-present-in-array/
+2487. 从链表中移除节点 https://leetcode.cn/problems/remove-nodes-from-linked-list/
+1669. 合并两个链表 https://leetcode.cn/problems/merge-in-between-linked-lists/  
