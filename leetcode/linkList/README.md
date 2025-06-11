@@ -37,4 +37,6 @@ cur = nxt
 
 课后作业：
 234. 回文链表 https://leetcode.cn/problems/palindrome-linked-list/
+  - 中间节点 + 反转链表
 2130. 链表最大孪生和 https://leetcode.cn/problems/maximum-twin-sum-of-a-linked-list/
+  - 中间节点 + 反转
