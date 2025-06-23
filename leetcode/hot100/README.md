@@ -10,10 +10,13 @@
 ### 杨辉三角
 
 ### 最大公约数和最小公倍数  
-findGCD 最大公约数
-findLCM 最小公倍数
+findGCD 最大公约数 - 辗转相除 for b!=0 {mod = a%b  a = b b= mod return a}
+findLCM 最小公倍数 - a*b/gcd(a,b)
 
 ### 198. 打家劫舍
+
+### 189 轮转数组
+3次反转
 
 ### 2966. 划分数组并满足最大差限制
 slices.Sort && slices.Chunk
@@ -21,7 +24,7 @@ slices.Sort && slices.Chunk
 ## 买股票
 https://labuladong.online/algo/dynamic-programming/stock-problem-summary/
 
-121 
+121 - 贪心
 122 
 123 
 188 
