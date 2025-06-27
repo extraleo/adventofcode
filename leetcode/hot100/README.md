@@ -18,6 +18,8 @@ findLCM 最小公倍数 - a*b/gcd(a,b)
 ### 189 轮转数组
 3次反转
 
+### 322 coins
+
 ### 2966. 划分数组并满足最大差限制
 slices.Sort && slices.Chunk
 
