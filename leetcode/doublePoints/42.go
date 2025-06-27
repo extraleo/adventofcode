@@ -21,6 +21,27 @@ func trap(height []int) int {
 
 }
 
+// 单调栈
+func trapStack(height []int) int {
+	ans := 0
+	st := []int{}
+	for i, h := range(height){
+			for len(st) > 0 && h >= height[st[len(st)-1]]{
+					bottomH := height[st[len(st)-1]] // 需要找到左边的柱子
+					st = st[:len(st)-1]
+					if len(st) == 0 {
+							break
+					}
+					left := st[len(st)-1]
+					dh := min(height[left], h) - bottomH
+					ans += dh*(i-left-1)
+			}
+			st = append(st, i)
+	}
+	return ans
+}
+
+
 // 第一版
 // 两次 for 循环
 func trapFirst(height []int) int {
