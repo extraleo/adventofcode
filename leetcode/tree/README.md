@@ -57,6 +57,29 @@
 236. 二叉树的最近公共祖先 https://leetcode.cn/problems/lowest-common-ancestor-of-a-binary-tree/solutions/2023872/fen-lei-tao-lun-luan-ru-ma-yi-ge-shi-pin-2r95/
 235. 二叉搜索树的最近公共祖先 https://leetcode.cn/problems/lowest-common-ancestor-of-a-binary-search-tree/solutions/2023873/zui-jin-gong-gong-zu-xian-yi-ge-shi-pin-8h2zc/
 
-课后作业：
+课后作业：【TBD】
 1123. 最深叶节点的最近公共祖先 https://leetcode.cn/problems/lowest-common-ancestor-of-deepest-leaves/
 2096. 从二叉树一个节点到另一个节点每一步的方向 https://leetcode.cn/problems/step-by-step-directions-from-a-binary-tree-node-to-another/
+
+
+## BFS
+
+102. 二叉树的层序遍历 https://leetcode.cn/problems/binary-tree-level-order-traversal/solution/bfs-wei-shi-yao-yao-yong-dui-lie-yi-ge-s-xlpz/
+
+【TBD】
+103. 二叉树的锯齿形层序遍历 https://leetcode.cn/problems/binary-tree-zigzag-level-order-traversal/solution/bfs-wei-shi-yao-yao-yong-dui-lie-yi-ge-s-xlv3/
+  偶数层的时候， append ans 时，反转一下再 append
+513. 找树左下角的值 https://leetcode.cn/problems/find-bottom-left-tree-value/solution/bfs-wei-shi-yao-yao-yong-dui-lie-yi-ge-s-f34y/
+
+课后作业：
+107. 二叉树的层序遍历 II https://leetcode.cn/problems/binary-tree-level-order-traversal-ii/
+104. 二叉树的最大深度 https://leetcode.cn/problems/maximum-depth-of-binary-tree/
+111. 二叉树的最小深度 https://leetcode.cn/problems/minimum-depth-of-binary-tree/
+2583. 二叉树中的第 K 大层和 https://leetcode.cn/problems/kth-largest-sum-in-a-binary-tree/
+199. 二叉树的右视图 https://leetcode.cn/problems/binary-tree-right-side-view/
+116. 填充每个节点的下一个右侧节点指针 https://leetcode.cn/problems/populating-next-right-pointers-in-each-node/
+117. 填充每个节点的下一个右侧节点指针 II https://leetcode.cn/problems/populating-next-right-pointers-in-each-node-ii/
+1302. 层数最深叶子节点的和 https://leetcode.cn/problems/deepest-leaves-sum/
+1609. 奇偶树 https://leetcode.cn/problems/even-odd-tree/
+2415. 反转二叉树的奇数层 https://leetcode.cn/problems/reverse-odd-levels-of-binary-tree/
+2641. 二叉树的堂兄弟节点 II https://leetcode.cn/problems/cousins-in-binary-tree-ii/
