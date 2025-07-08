@@ -63,16 +63,17 @@
 
 
 ## BFS
-
 102. 二叉树的层序遍历 https://leetcode.cn/problems/binary-tree-level-order-traversal/solution/bfs-wei-shi-yao-yao-yong-dui-lie-yi-ge-s-xlpz/
-
-【TBD】
+两个数组, 一个 cur 一个ans 
+有 cur 必有 nxt
+ans 里面 append vals, vals 是cur 里面node 的 val
 103. 二叉树的锯齿形层序遍历 https://leetcode.cn/problems/binary-tree-zigzag-level-order-traversal/solution/bfs-wei-shi-yao-yao-yong-dui-lie-yi-ge-s-xlv3/
   偶数层的时候， append ans 时，反转一下再 append
 513. 找树左下角的值 https://leetcode.cn/problems/find-bottom-left-tree-value/solution/bfs-wei-shi-yao-yao-yong-dui-lie-yi-ge-s-f34y/
-
+  层序遍历, ans[-1][0]
 课后作业：
 107. 二叉树的层序遍历 II https://leetcode.cn/problems/binary-tree-level-order-traversal-ii/
+层序遍历, return的时候 ans[::-1]
 104. 二叉树的最大深度 https://leetcode.cn/problems/maximum-depth-of-binary-tree/
 111. 二叉树的最小深度 https://leetcode.cn/problems/minimum-depth-of-binary-tree/
 2583. 二叉树中的第 K 大层和 https://leetcode.cn/problems/kth-largest-sum-in-a-binary-tree/
