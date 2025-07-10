@@ -1,4 +1,4 @@
-package main
+package hot100
 
 type ListNode struct {
      Val int

@@ -1,4 +1,4 @@
-package main
+package hot100
 
 type Trie struct {
 	root *Node

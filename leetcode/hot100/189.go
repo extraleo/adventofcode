@@ -1,4 +1,4 @@
-package main
+package hot100
 
 func rotate(nums []int, k int) {
 	n := len(nums)

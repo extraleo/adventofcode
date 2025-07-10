@@ -1,4 +1,4 @@
-package main
+package hot100
 
 func rob(nums []int) int {
 	mem := make([]int, len(nums)+1)

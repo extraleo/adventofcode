@@ -46,8 +46,6 @@ class LRUCache {
 					remove(deleteNode);
 
 			}
-
-			
 	}
 
 	private Node getNode(int key){

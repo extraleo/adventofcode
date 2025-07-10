@@ -1,4 +1,4 @@
-package main
+package hot100
 
 func dailyTemperatures(temperatures []int) []int {
 	n := len(temperatures)   

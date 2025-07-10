@@ -1,4 +1,4 @@
-package main
+package hot100
 
 func findMid(root *ListNode) *ListNode {
 	fast, slow := root, root
