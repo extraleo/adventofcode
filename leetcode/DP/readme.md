@@ -23,6 +23,7 @@ dfs(i)=dfs(i−1)+dfs(i−2)
 
 ## 0-1 背包
 494. 目标和 https://leetcode.cn/problems/target-sum/solution/jiao-ni-yi-bu-bu-si-kao-dong-tai-gui-hua-s1cx/
+nums[i] 不能重复选, 所以选+不选是  dfs(i-1, c) + dfs(i-1, c-num[i])
 322. 零钱兑换 https://leetcode.cn/problems/coin-change/solution/jiao-ni-yi-bu-bu-si-kao-dong-tai-gui-hua-21m5/
 
 课后作业：
